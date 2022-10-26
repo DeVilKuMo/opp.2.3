@@ -1,6 +1,6 @@
 package dz1;
 
-public class transport {
+public abstract class transport {
      private String brand;
 
      private String model;
@@ -12,6 +12,13 @@ public class transport {
     private String color;
 
     private int speedMax;
+
+    private final String fuel;
+
+
+
+
+
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -53,6 +60,10 @@ public class transport {
         return speedMax;
     }
 
+    public String getFuel() {
+        return fuel;
+    }
+
     public void setSpeedMax(int speedMax) {
         if (speedMax<=0){
             this.speedMax = speedMax;
@@ -61,17 +72,32 @@ public class transport {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public transport(String brand, String model, int yearOut, String country, String color, int speedMax) {
+    public transport(String brand, String model, int yearOut, String country, String color, int speedMax,String fuel) {
         this.brand = brand;
         this.model = model;
         this.yearOut = yearOut;
         this.country = country;
         this.color = color;
         this.speedMax = speedMax;
-
-    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+        this.fuel=fuel;
 
 
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+    }
+    public abstract void refill();
+    @Override
+    public String toString() {
+        return "transport{" +
+                "brand='" + brand + '\'' +
+                ", model='" + model + '\'' +
+                ", yearOut=" + yearOut +
+                ", country='" + country + '\'' +
+                ", color='" + color + '\'' +
+                ", speedMax=" + speedMax +
+                ", fuel='" + fuel + '\'' +
+                '}';
     }
 }

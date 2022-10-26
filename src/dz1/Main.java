@@ -2,18 +2,29 @@ package dz1;
 
 public class Main {
     public static void main(String[] args) {
-        transport lada = new transport("Лада", "Гранта", 2015, "Россия", null, 200);
+
+
+        transport lada = new transport("лада", "гранта", 2020, "россия", "желтый", 200, "бензин") {
+            @Override
+            public void refill() {
+                System.out.println(" "+getBrand()+" , "+getFuel());
+            }
+        };
+
 
         Train lastochka = new Train("Ласточка", "В-901", 2011, "Россия",301,
                 "Белорусский вокзал", "Минск-Пассажирский", 3500.0, 11);
 
+
+
         Train leningrad = new Train("Ленинград", "D-125", 2019, "Россия", 270,
                 "Ленинградский вокзал", "Ленинградский-Пассажирский", 1700.0,8);
+
+
 
         Bus volvo = new Bus("Volvo", "B12 Series", 2019, "Германия", "белый", 220);
         Bus mercedes = new Bus("Mercedes-Benz", "Sprinter", 2021, "Германия", "черный", 280);
         Bus neoplan = new Bus("Neoplan", "Cityliner", 2011, "Германия", "зеленый", 190);
-
 
 
         printInfo(lada);
@@ -24,6 +35,8 @@ public class Main {
         printInfoBus(volvo);
         printInfoBus(mercedes);
         printInfoBus(neoplan);
+        lada.refill();
+
     }
     private static void printInfo (transport transport){
         System.out.println("Марка автомобиля: "+ transport.getBrand()
