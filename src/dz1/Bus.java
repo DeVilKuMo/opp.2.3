@@ -14,6 +14,9 @@ public class Bus {
 
     private int speedMax;
 
+
+
+
     public String getBrand() {
         return brand;
     }
@@ -69,5 +72,8 @@ public class Bus {
         this.country = country;
         this.color = color;
         this.speedMax = speedMax;
+
+
     }
+
 }
