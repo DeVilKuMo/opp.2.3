@@ -2,7 +2,7 @@ package dz1;
 
 import java.time.LocalDate;
 
-public class Car {
+public class Car extends Transport {
     private final String brand;
     private final String model;
     private double engineCapacity;
@@ -180,6 +180,11 @@ public class Car {
 
     public String getModel() {
         return model;
+    }
+
+    @Override
+    public void refill() {
+
     }
 
     public int getYearOfProduction() {

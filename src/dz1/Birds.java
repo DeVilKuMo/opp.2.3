@@ -1,6 +1,6 @@
 package dz1;
 
-public class Birds extends Animals  {
+public class Birds extends Animal {
 
 
     public Birds(String name, int age, String habitat) {

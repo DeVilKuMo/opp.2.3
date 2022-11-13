@@ -1,6 +1,6 @@
 package dz1;
 
-public abstract class transport {
+public abstract class Transport {
      private String brand;
 
      private String model;
@@ -13,7 +13,7 @@ public abstract class transport {
 
     private int speedMax;
 
-    private final String fuel;
+    private  String fuel = null;
 
 
 
@@ -72,7 +72,7 @@ public abstract class transport {
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-    public transport(String brand, String model, int yearOut, String country, String color, int speedMax,String fuel) {
+    public Transport() {
         this.brand = brand;
         this.model = model;
         this.yearOut = yearOut;

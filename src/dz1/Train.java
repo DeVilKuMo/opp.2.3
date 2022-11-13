@@ -1,11 +1,11 @@
 package dz1;
 
-public class Train {
+public class Train extends Transport {
     private double cost;
     private double travelTime;
     private String departureStationName;
     private String finalStop;
-    private int NumberOfWagons;
+    private int numberOfWagons;
 
     private String brand;
     private String model;
@@ -24,6 +24,11 @@ public class Train {
 
     public String getModel() {
         return model;
+    }
+
+    @Override
+    public void refill() {
+
     }
 
     public void setModel(String model) {
@@ -87,22 +92,23 @@ public class Train {
     }
 
     public int getNumberOfWagons() {
-        return NumberOfWagons;
+        return numberOfWagons;
     }
 
     public void setNumberOfWagons(int numberOfWagons) {
-        NumberOfWagons = numberOfWagons;
+        numberOfWagons = numberOfWagons;
     }
 
     public Train(String brand, String model, Integer productionYear, String productionCountry, Integer maxSpeed,
                  String departureStationName,String finalStop, Double cost, int numberOfWagons
                  ) {
+        super();
 
         this.cost = cost;
         this.travelTime = travelTime;
         this.departureStationName = departureStationName;
         this.finalStop = finalStop;
-        NumberOfWagons = numberOfWagons;
+        numberOfWagons = numberOfWagons;
         this.brand = brand;
         this.model = model;
         this.productionYear = productionYear;

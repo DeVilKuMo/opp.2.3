@@ -1,6 +1,6 @@
 package dz1;
 
-public class Bus {
+public class Bus extends Transport {
 
     private String brand;
 
@@ -63,6 +63,11 @@ public class Bus {
 
     public void setSpeedMax(int speedMax) {
         this.speedMax = speedMax;
+    }
+
+    @Override
+    public void refill() {
+
     }
 
     public Bus(String brand, String model, int yearOut, String country, String color, int speedMax) {

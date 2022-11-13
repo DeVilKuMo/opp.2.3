@@ -1,6 +1,6 @@
 package dz1;
 
-public class Predators extends Mammals{
+public class Predators extends Mammal {
 
 
     public Predators(String name, int age, String habitat) {

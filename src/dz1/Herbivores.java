@@ -1,6 +1,6 @@
 package dz1;
 
-public class Herbivores extends Mammals{
+public class Herbivores extends Mammal {
     public Herbivores(String name, int age, String habitat) {
         super(name, age, habitat);
     }

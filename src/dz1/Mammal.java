@@ -1,6 +1,6 @@
 package dz1;
 
-public class Mammals extends Animals{
+public class Mammal extends Animal {
     private int speed;
 
     public int getSpeed() {
@@ -11,7 +11,7 @@ public class Mammals extends Animals{
         this.speed = speed;
     }
 
-    public Mammals(String name, int age, String habitat) {
+    public Mammal(String name, int age, String habitat) {
         super(name, age, habitat);
     }
 
