@@ -184,6 +184,7 @@ public class Car extends Transport {
 
     @Override
     public void refill() {
+        System.out.println("Вид топлива для заправки машины " + getBrand() + ": " + getFuel());
 
     }
 

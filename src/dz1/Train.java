@@ -28,6 +28,7 @@ public class Train extends Transport {
 
     @Override
     public void refill() {
+        System.out.println("Вид топлива для заправки поезда " + getBrand() + ": " + getFuel());
 
     }
 

@@ -67,6 +67,7 @@ public class Bus extends Transport {
 
     @Override
     public void refill() {
+        System.out.println("Вид топлива для заправки автобуса " + getBrand() + ": " + getFuel());
 
     }
 
